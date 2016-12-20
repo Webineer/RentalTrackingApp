@@ -1,0 +1,58 @@
+<% Response.Buffer = True %>
+<!-- include virtual="/EventRegistration/includes/session.asp" -->
+<!--#include virtual="/RentalTracking/includes/index_header.asp" -->
+<!--#include file="lib/_lib_adodbDatabase.asp" -->
+<script language="Javascript" src="/includes/lib/_lib_client_side_scripts.js"></script>
+<script language="Javascript" src="/EventRegistration/includes/formcheck.js"></script>
+<!--#include file="includes/_rentalFunctions.asp" -->
+<!--#include file="includes/adovbs.inc" -->
+
+<h1>Ski Bradford Rental Tracking</h1>
+
+<%
+	Dim NameArray, listedData, colHeaders(), SQLString, DataArray(), URL, NewKey, IdValues
+	Dim Form2DbArray(), TableName, DbType, KeyNames(3), Title, theHeaders(), noData, PrimaryKeyFieldName, PrimaryKeyFieldValue, PrimaryKeyFieldType
+	Dim DateDelimiter
+	noData = "There are no events scheduled at this time."
+	DbType = "SQLServer"
+	'DateDelimiter = "#"  'for MSAccess
+	DateDelimiter = "'"  'for SQLServer
+	'ConnectionString = "DSN=RentaldB;UID=;PWD="
+
+'Get last recorded transaction from the transaction table
+	SQLString = "SELECT MAX(id) FROM transactions WHERE rental_out LIKE '" & Date() & "%' AND "
+	'SQLString = "SELECT id FROM transactions WHERE rental_out=#" & Date() & "# AND "
+	If (Request.Form("Agreement2ID")<> "") Then		
+		SQLString = SQLString & "agreement_id ='" & Request.Form("Agreement2ID") & "'"
+	End If
+	
+	If (Request.Form("Equipment1ID") <> "") Then
+		SQLString = SQLString & "equipment1_id ='" & Request.Form("Equipment1ID") & "'"
+	End If
+	
+	If (Request.Form("Equipment2ID") <> "") Then
+		SQLString = SQLString & "equipment2_id ='" & Request.Form("Equipment2ID") & "'"
+	End If
+	
+	'SQLString = SQLString & " DESC"
+	'Response.Write SQLString & "<br>"
+	Call GetData(ConnectionString,SQLString)
+	IdValues = listedData
+	'Response.Write "IdValues is " & IsArray(IdValues) & "<br>"
+	'Response.Write "IdValues is " & IdValues(0,0) & "<br>"
+
+'Map the form fields to the database table fields
+	SQLString = "update transactions set rental_in=" & DateDelimiter & Request.Form("DateCreated") & DateDelimiter & " where id=" & IdValues(0,0)
+	
+	'Response.Write SQLString & "<br>"
+	Call UpdateDataGenericSQL(ConnectionString, SQLString)
+	Response.Write "<p>Equipment Successfully Returned!</p>"
+%>
+
+<h2>Equipment Returns</h2>
+<p>
+<!--#include file="lib/forms/rental_form.asp" -->
+</p>
+
+
+<!--#include virtual="/RentalTracking/includes/index_footer.asp" -->

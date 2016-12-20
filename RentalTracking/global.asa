@@ -1,0 +1,17 @@
+<OBJECT RUNAT=Server SCOPE=Session ID=ConnectionString PROGID="ADODB.Connection"></OBJECT>
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+Sub Session_onStart()
+	Session.Contents("testValue") = "Hello World!"
+	ConnectionString.Open "DSN=RentalDb;UID=rental_admin;PWD=rental1234"
+End Sub
+
+Sub Session_onEnd()
+	ConnectionString.Close
+	Set ConnectionString = Nothing
+
+	For Each Item in Session.Contents
+		Set Session.Contents(Item) = Nothing
+	Next
+	Response.Redirect "logout.asp"
+End Sub
+</SCRIPT>

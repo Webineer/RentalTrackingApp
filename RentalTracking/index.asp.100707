@@ -1,0 +1,91 @@
+<% Response.Buffer = True %>
+<!-- include virtual="/EventRegistration/includes/session.asp" -->
+<!--#include virtual="/RentalTracking/includes/index_header.asp" -->
+<!--#include file="lib/_lib_adodbDatabase.asp" -->
+<script language="Javascript" src="/includes/lib/_lib_client_side_scripts.js"></script>
+<script language="Javascript" src="/EventRegistration/includes/formcheck.js"></script>
+<!--#include file="includes/_craFunctions.asp" -->
+<!--#include file="includes/adovbs.inc" -->
+
+<h1>Ski Bradford Rental Tracking</h1>
+
+<%
+	Dim NameArray, listedData, colHeaders(), SQLString, DataArray(), URL, NewKey
+	Dim Form2DbArray(), TableName, DbType, KeyNames(3), Title, theHeaders(), noData, PrimaryKey, PrimaryValue
+	Dim CoursePrice, CourseName, DateDelimiter
+	noData = "There are no events scheduled at this time."
+	DbType = "SQLServer"
+	DateDelimiter = "#"  'for MSAccess
+	'DateDelimiter = "'"  'for SQLServer
+	'ConnectionString = "DSN=RentaldB;UID=;PWD="
+%>	
+
+<!-- Begin Content -->
+
+<p>
+
+<%
+'Present an updated listing of users
+'	'SQLString = "SELECT event_instances.instance_id, event_instances.event_date_start, event_instances.status FROM event_instances, events"
+'	'SQLString = SQLString & " WHERE event_instances.event_id = events.event_id"
+'	'SQLString = SQLString & " AND event_instances.status = 'Active'"
+'	
+'	SQLString = "SELECT DISTINCT events.event_id, events.event_name, types.type_name FROM event_instances, events, types"
+	SQLString = "SELECT id, agreement_id, equipment1_id, equipment2_id FROM transactions"
+'	SQLString = SQLString & " WHERE events.type_id = types.type_id"
+'	SQLString = SQLString & " AND event_instances.event_id = events.event_id"
+'	SQLString = SQLString & " AND event_instances.status = 'Active'"
+'	SQLString = SQLString & " AND event_instances.event_date_start >= " & DateDelimiter & DateValue(Date()) & DateDelimiter
+'	SQLString = SQLString & " ORDER BY types.type_name, events.event_name"
+'	'Response.Write SQLString & "<br>"
+'	
+'	Title = ""
+'	ReDim theHeaders(1)
+'	theHeaders(0) = "Type of Event"
+'	theHeaders(1) = "Events"
+'	'theHeaders(2) = "Type of Event"
+'	'Response.Write SQLString & "<br>"
+'	'Response.Write ConnectionString & "<br>"
+'	'Response.Write Request.Form("rowId") & " is asset type.<br>"
+'	'Response.Write "<br><br>"
+'	Call GetData(ConnectionString,SQLString)
+'	'Call displayCourseData(Title, listedData, theHeaders)
+'	Call displayEventsView(Title, listedData, theHeaders)
+'	'Response.Write "<p class=center><a href=""Javascript:history.back()"">Back</a></p>"
+'
+'	Response.Write "<p>&nbsp;</p>"
+
+'Present listing of upcoming events in chronological order
+	'SQLString = "SELECT events.event_id, events.event_name, events.synopsis, event_instances.event_date_start FROM event_instances, events, types"
+	'SQLString = "SELECT events.event_id, events.event_name, types.type_name FROM events, types"
+	'SQLString = "SELECT event_instances.event_date_start, events.event_name, locations.location_name, events.event_id, event_instances.instance_id FROM event_instances, events, types, locations"
+	'SQLString = SQLString & " WHERE events.type_id = types.type_id"
+	'SQLString = SQLString & " AND event_instances.event_id = events.event_id"
+	'SQLString = SQLString & " AND event_instances.location_id = locations.location_id"
+	'SQLString = SQLString & " AND event_instances.status = 'Active'"
+	'SQLString = SQLString & " AND event_instances.event_date_start >= " & DateDelimiter & DateValue(Date()) & DateDelimiter
+	'SQLString = SQLString & " ORDER BY event_instances.event_date_start, events.event_name"
+	'Response.Write SQLString & "<br>"
+	
+	Title = "Upcoming Events"
+	ReDim theHeaders(2)
+	theHeaders(0) = "Date"
+	theHeaders(1) = "Event - Location"
+	theHeaders(2) = ""
+	'Response.Write SQLString & "<br>"
+	'Response.Write ConnectionString & "<br>"
+	'Response.Write Request.Form("rowId") & " is asset type.<br>"
+	'Response.Write "<br><br>"
+	Call GetData(ConnectionString,SQLString)
+	'Call displayCourseData(Title, listedData, theHeaders)
+	Call displayEventsChronologyData(Title, listedData, theHeaders)
+%>
+
+</p>
+
+
+
+
+<!-- End Content -->
+
+<!--#include virtual="/RentalTracking/includes/index_footer.asp" -->
