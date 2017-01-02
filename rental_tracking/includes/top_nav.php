@@ -6,6 +6,6 @@
 	<td><p><a class="nav_main" href="/rental_tracking/returns.php" >Returns</a></p></td>
 	<td><p><a class="nav_main" href="/rental_tracking/equipment/index.php">Equipment</a></p></td>
 	<td><p><a class="nav_main" href="/rental_tracking/reporting/index.php">Reporting</a></p></td>
-	<td><p><a class="nav_main" href="logout.php">Logout</a></p></td>
+	<td><p><a class="nav_main" href="/rental_tracking/logout.php">Logout</a></p></td>
 </tr>
 </table>
