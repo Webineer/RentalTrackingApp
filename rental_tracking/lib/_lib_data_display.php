@@ -1345,14 +1345,15 @@ function display_equipment_history($result_object) {
 	while ($row = $result_object->fetchRow()) {    
 		//print "id is " . $row[0] . "<br>";
 		if ($i != $row[1]) {
-            print "<tr><td colspan=\"3\"><br><br></td>";
+            print "<tr><td colspan=\"4\"><br><br></td>";
 			print "<tr>";
-			print "<th colspan=\"3\" width=\"100%\">" . stripslashes($row[0]) . " " . stripslashes($row[1]) . "</th>";
+			print "<th colspan=\"3\" width=\"100%\">" . stripslashes($row[0]) . " - " . stripslashes($row[1]) . "</th>";
 			print "</tr>";
 			print "<tr>";
 			print "<td><span class=\"card_no_indent\">" . stripslashes($row[0]) . "</span>&nbsp;</td>";
 			print "<td><span class=\"card_no_indent\">" . stripslashes($row[1]) . "</span>&nbsp;</td>";
 			print "<td><span class=\"card_no_indent\">" . stripslashes($row[2]) . "</span>&nbsp;</td>";
+            print "<td><span class=\"card_no_indent\">" . stripslashes($row[3]) . "</span>&nbsp;</td>";
 			print "</tr>";
 			$i = $row[1];
 		} else {
@@ -1360,6 +1361,7 @@ function display_equipment_history($result_object) {
 			print "<td><span class=\"card_no_indent\">" . stripslashes($row[0]) . "</span>&nbsp;</td>";
 			print "<td><span class=\"card_no_indent\">" . stripslashes($row[1]) . "</span>&nbsp;</td>";
 			print "<td><span class=\"card_no_indent\">" . stripslashes($row[2]) . "</span>&nbsp;</td>";
+            print "<td><span class=\"card_no_indent\">" . stripslashes($row[3]) . "</span>&nbsp;</td>";
 			print "</tr>";
 		}
 	}
