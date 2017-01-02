@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+<HEAD>
+	<title><?php print ORGANIZATION; ?> - Registration Application</title>
+</HEAD>
+<BODY BACKGROUND="http://209.251.75.93/skibradford/bkgd.jpg" TEXT="#0000AA" VLINK="#FFBB00" LINK="#FFBB00">
+<CENTER><IMG SRC="http://209.251.75.93/skibradford/lessons2.jpg" ALT="Form Logo"></CENTER>
+<TABLE CELLPADDING="5">
+	<TR>
+		<TD WIDTH="100" VALIGN="top" BGCOLOR="#0000AA">
+		
+<CENTER>
+	<FONT COLOR="#FFFFFF">
+		<A HREF="http://209.251.75.93/skibradford/lessons.shtml"><IMG SRC="http://209.251.75.93/skibradford/progtag.gif" BORDER="0" ALT="Programs"></A><BR>
+			<FONT SIZE="3">
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#lessons"><B>Ski & Snowboard Lessons</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#packs"><B>Ski & Snowboard Lesson Packs</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#adult"><B>Adult Ski Programs</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#junior"><B>Junior Ski Programs</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#littleb"><B>Little-B Ski Programs</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#littlerider"><B>Little Rider Snowboard Programs</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#snowboard"><B>Snowboard Programs</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#racecamps"><B>Ski Clinics</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#sbcamps"><B>Snowboard Clinics</B></A><BR>
+				<P><A HREF="http://209.251.75.93/skibradford/onlineapp1.shtml"><B>Online Application</B></A><BR>
+			</FONT><BR>
+
+		<A HREF="http://209.251.75.93/skibradford/events.shtml"><IMG SRC="http://209.251.75.93/skibradford/eventstag.gif" BORDER="0" ALT="Events"></A><BR>
+		<FONT SIZE="3">
+			<P><A HREF="http://209.251.75.93/skibradford/events.shtml#nov"><B>November</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/events.shtml#dec"><B>December</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/events.shtml#jan"><B>January</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/events.shtml#feb"><B>February</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/events.shtml#mar"><B>March</B></A><BR>
+			<!-- P><A HREF="http://209.251.75.93/skibradford/events.shtml#all"><B>All Season</B></A><BR -->
+		</FONT><BR>
+
+		<a href="http://209.251.75.93/skibradford/generalinfo.shtml"><IMG SRC="http://209.251.75.93/skibradford/infotag.gif" ALT="General Information" BORDER="0"></a><BR>
+		<FONT SIZE="3">
+			<P><A HREF="http://209.251.75.93/skibradford/generalinfo.shtml#hours"><B>Operating Hours</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/generalinfo.shtml#rates"><B>Rates</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/generalinfo.shtml#rentals"><B>Rentals</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/generalinfo.shtml#packs"><B>Season Passes</B></A><BR>
+			<P><A HREF="http://209.251.75.93/skibradford/generalinfo.shtml#sixpack"><B>Six Packs</B></A><BR>
+			<!-- P><A HREF="http://209.251.75.93/skibradford/lessons.shtml#raceclinics"><B>Race Clinics</B></A><BR -->
+		</FONT><br>
+		
+		<FONT SIZE="3">
+		<P><A HREF="http://www.skibradford.com/skimap.html"><B>Trail Map</B></A><BR>
+		
+		<p><A HREF="http://www.skibradford.com"><IMG SRC="http://209.251.75.93/skibradford/hometag.gif" BORDER="0" ALT="Home"></A>
+		</FONT>
+	</FONT>
+</CENTER>
+
+
+		</TD>
+		<TD WIDTH="*" VALIGN="top">
+<!-- Start Content Here -->

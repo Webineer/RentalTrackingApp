@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title> Ski Bradford</title>
+	<!-- link calendar files  -->
+	<script language="JavaScript" src="/reservation/includes/calendar_us.js"></script>
+	<link rel="stylesheet" href="/reservation/includes/calendar.css" />
+    
+	<link rel="stylesheet" href="http://209.251.75.92/wordpress/wp-content/themes/brightsky/style.css" type="text/css" media="screen" />
+	<link rel="pingback" href="http://209.251.75.92/wordpress/xmlrpc.php" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		
+	<link rel="alternate" type="application/rss+xml" title="Ski Bradford Blog &raquo; Feed" href="http://209.251.75.92/wordpress/?feed=rss2" />
+
+<link rel="alternate" type="application/rss+xml" title="Ski Bradford Blog &raquo; Comments Feed" href="http://209.251.75.92/wordpress/?feed=comments-rss2" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://209.251.75.92/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://209.251.75.92/wordpress/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Ski Bradford Blog' href='http://209.251.75.92/wordpress' />
+<meta name="generator" content="WordPress 3.0.1" />
+		<script type="text/javascript" src="http://209.251.75.92/wordpress/wp-content/themes/brightsky/js/jquery.min.js"></script>
+		<script type="text/javascript" src="http://209.251.75.92/wordpress/wp-content/themes/brightsky/js/cufon-yui.js"></script>
+<script type="text/javascript" src="http://209.251.75.92/wordpress/wp-content/themes/brightsky/js/vegur_400-vegur_700.font.js"></script>
+<script type="text/javascript">
+<!--
+jQuery(function($) {
+	Cufon.replace('h1.maintitle, #header h1, h2.mainhead, li.t1 a, li.t2 a, li.t3 a');
+});
+-->
+</script>
+
+<!-- Mega Menu Code -->
+
+<!-- script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script -->
+
+<link rel="stylesheet" type="text/css" href="http://209.251.75.93/skibradford2/includes/jkmegamenu.css" />
+
+<script type="text/javascript" src="http://209.251.75.93/skibradford2/includes/jkmegamenu.js">
+
+/***********************************************
+* jQuery Mega Menu- by JavaScript Kit (www.javascriptkit.com)
+* This notice must stay intact for usage
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+//jkmegamenu.definemenu("anchorid", "menuid", "mouseover|click")
+jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
+jkmegamenu.definemenu("megaanchor2", "megamenu2", "mouseover")
+jkmegamenu.definemenu("megaanchor3", "megamenu3", "mouseover")
+jkmegamenu.definemenu("megaanchor4", "megamenu4", "mouseover")
+
+</script>
+
+<!-- End Mega Menu Code -->
+		
+		
+</head>
+
+<body class="home blog">
+
+	<div id="nav">
+	    <div class="container">
+	        <!-- ul>
+                <li class="current_page_item page_item"><a href="http://209.251.75.92/wordpress/" title=""><span>Home</span></a></li><li class="page_item page-item-2"><a href="http://209.251.75.92/wordpress/?page_id=2" title="About"><span>About</span></a></li>
+                <li class="page_item page-item-107"><a href="http://209.251.75.92/wordpress/?page_id=107" title="About"><span>About</span></a></li>
+                <li class="page_item page-item-106"><a href="http://209.251.75.92/wordpress/?page_id=106" title="Contact"><span>Contact</span></a></li>
+                <li class="page_item page-item-102"><a href="http://209.251.75.92/wordpress/?page_id=102" title="Our Website"><span>Our Website</span></a></li>
+            </ul -->
+        
+        <!--Mega Menu Anchor-->
+        <ul>
+            <li class="page_item"><a href="http://www.skibradford.com">Home</a></li>
+            <li class="page_item"><a href="http://209.251.75.93/skibradford2/general.php" id="megaanchor">Resort Information</a></li>
+            <li class="page_item"><a href="http://209.251.75.93/skibradford2/lift.php" id="megaanchor2">Rates &amp; Lessons</a></li>
+            <li class="page_item"><a href="http://209.251.75.93/skibradford2/littleb.php" id="megaanchor3">Programs &amp; Clinics</a></li>
+            <li class="page_item"><a href="http://209.251.75.93/skibradford/terrain.php" id="megaanchor4">Special Attactions</a></li>
+        </ul>
+
+        <!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+        <div id="megamenu1" class="megamenu">
+
+        <div class="column">
+	       <h3>Resort Information</h3>
+	       <ul>
+	           <li><a href="http://209.251.75.93/skibradford2/info/general.php">General Information</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/info/report.php">Snow Report</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/info/events.php">Events</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/info/map.php">Trail Map</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/info/hours.php">Hours Of Operation</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/info/directions.php">Directions</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/info/contactus.php">Contact Us</a></li>
+	       </ul>
+        </div>
+
+        <!-- div class="column_vid">
+           <object style="height: 195px; width: 320px"><param name="movie" value="http://www.youtube.com/v/tmf8Hu5nPTs?version=3"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/tmf8Hu5nPTs?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="320" height="195"></object>
+        </div -->
+
+        <br style="clear: left" /> <!--Break after 3rd column. Move this if desired-->
+        
+        </div>
+        
+        <div id="megamenu2" class="megamenu">
+
+        <div class="column">
+	       <h3>Rates &amp; Lessons</h3>
+	       <ul>
+	           <li><a href="http://209.251.75.93/skibradford2/rates/lift.php">Lift Tickets</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/rates/seasonpasses.php">Season Passes</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/rates/sixpacks.php">Six Packs</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/rates/rentals.php">Rentals</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/lessons/privatelessons.php">Private Lessons</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/lessons/grouplessons.php">Group Lessons</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/lessons/lessonpackages.php">Lesson Packages</a></li>
+	       </ul>
+        </div>
+
+        <div class="column_vid">
+           <object style="height: 195px; width: 320px"><param name="movie" value="http://www.youtube.com/v/o9rf0zB7vWg?version=3"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/o9rf0zB7vWg?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="320" height="195"></object>
+        </div>
+
+        <br style="clear: left" /> <!--Break after 3rd column. Move this if desired-->
+        
+        </div>
+        
+        <div id="megamenu3" class="megamenu">
+
+        <div class="column">
+	       <h3>Programs &amp; Clinics</h3>
+	       <ul>
+	           <li><a href="http://209.251.75.93/skibradford2/programs/littleb.php">Little B Ski</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/programs/littlerider.php">Little Rider Snowboard</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/programs/junior.php">Junior Ski &amp; Snowboard</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/programs/adult.php">Adult Ski &amp; Snowboard</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/clinics/decclinics.php">December Ski &amp; Snowboard Clinics</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/clinics/febclinics.php">February Ski &amp; Snowboard Clinics</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/clinics/raceclinics.php">Race Clinics</a></li>
+	       </ul>
+        </div>
+
+        <div class="column_vid">
+           <object style="height: 195px; width: 320px"><param name="movie" value="http://www.youtube.com/v/qEZGsTn0QwQ?version=3"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/qEZGsTn0QwQ?version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="320" height="195"></object>
+        </div>
+
+        <br style="clear: left" /> <!--Break after 3rd column. Move this if desired-->
+        
+        </div>
+        
+        <div id="megamenu4" class="megamenu">
+
+        <div class="column">
+	       <h3>Special Attractions</h3>
+	       <ul>
+	           <li><a href="http://209.251.75.93/skibradford/terrain.php">Terrain Park</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/racing.php">Racing</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/grouptrips.php">Group Trips</a></li>
+	           <li><a href="http://209.251.75.93/skibradford2/photos.php">Photo Gallery</a></li>
+               <li><a href="http://209.251.75.93/skibradford2/etix.php">Buy Online</a></li>
+	       </ul>
+        </div>
+
+        <div class="column_img">
+           <img src="http://209.251.75.93/skibradford2/images/terrain_menu.jpg" alt="Terrain Park" border="0">
+        </div>
+
+        <br style="clear: left" /> <!--Break after 3rd column. Move this if desired-->
+        
+        </div>
+<!-- End Mega Menu div -->        
+    </div>    
+<!-- End Nav Container div -->        
+	</div>
+<!-- End nav div -->    
+    
+		
+	<div id="header" class="clear">
+	    <div class="container cheader">
+	    	<h1 id="blogtitle"><a href="http://209.251.75.92/wordpress/"><img src="http://www.wafflehauslab.com/skibradford/wp-content/uploads/2010/10/headerbg.png" alt="Ski Bradford Blog" /></a></h1>		</div>
+
+	</div> <!-- end of #header -->
+	<div id="navcat">
+
+    	<div class="container">
+    	<!--Error 4 Start -->	<ul>	<li class="cat-item cat-item-3"><a href="http://209.251.75.92/wordpress/?cat=3" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="http://209.251.75.92/wordpress/?cat=25" title="View all posts filed under New England Skiing">New England Skiing</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://209.251.75.92/wordpress/?cat=4" title="View all posts filed under Ski Bradford">Ski Bradford</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://209.251.75.92/wordpress/?cat=1" title="View all posts filed under Uncategorized">Uncategorized</a>
+
+</li>
+</ul><!--Error 4 End -->
+		</div>
+	</div>
+	<div class="clear"></div>
+	
+<div id="wrapper" class="container">
+			<div id="content" class="subcontainer fleft">
+            <p>&nbsp;</p>
+
+<!-- Begin Content -->

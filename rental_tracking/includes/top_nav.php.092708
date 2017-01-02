@@ -1,0 +1,12 @@
+<table cellpadding="3" cellspacing="0" border="0" width="99%">
+<tr>
+	<td><img src="/skibradford2/images/spacer.gif" width="5" height="3"></td>
+	<td><p><a class="nav_main" href="http://www.skibradford.com/">Home</a></p></td>
+	<td><p><a class="nav_main" href="/skibradford2/info/" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu1, '150px')" onMouseout="delayhidemenu()" >Resort Info</a></p></td>
+	<td><p><a class="nav_main" href="/skibradford2/rates/" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu2, '150px')" onMouseout="delayhidemenu()" >Rates</a></p></td>
+	<td><p><a class="nav_main" href="/skibradford2/lessons/" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu3, '150px')" onMouseout="delayhidemenu()">Lessons</a></p></td>
+	<td><p><a class="nav_main" href="/skibradford2/programs/" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu4, '150px')" onMouseout="delayhidemenu()">Lesson Programs</a></p></td>
+	<td><p><a class="nav_main" href="/skibradford2/clinics/" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu5, '150px')" onMouseout="delayhidemenu()">Clinics</a></p></td>
+	<td><p><a class="nav_main" href="#" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu6, '150px')" onMouseout="delayhidemenu()">Additional Information</a></p></td>
+</tr>
+</table>

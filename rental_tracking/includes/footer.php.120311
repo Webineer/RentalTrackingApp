@@ -1,0 +1,60 @@
+<p>&nbsp;</p>
+<!-- End Content -->		
+			</div>
+	
+<div id="sidebar" class="sidecontainer fright">
+
+	<div class="widgets">
+		<h2 class="mainhead">Subscribe!</h2>
+		<p class="feed"><a href="http://209.251.75.92/wordpress/?feed=rss2">Subscribe &amp; receive <br /><span>Ski Bradford Updates!</span></a></p>
+
+			<br class="clear" />
+		</form>
+	</div>
+
+	<ul>
+		<li class="widgets">			<div class="textwidget"><a href="http://www.facebook.com/pages/Haverhill-MA/Bradford-Ski-Area/106250569443668"><img src="http://209.251.75.92/wordpress/wp-content/uploads/2010/11/facebook.png" alt="" /></a>
+<a href="http://www.twitter.com/skibradford"><img src="http://209.251.75.92/wordpress/wp-content/uploads/2010/11/twitter.png" alt="" /></a>
+<a href="http://www.youtube.com/user/skibradford1?feature=mhum"><img src="http://209.251.75.92/wordpress/wp-content/uploads/2010/11/youtube.png" alt="" /></a>
+<a href="http://www.feedburner.com"><img src="http://209.251.75.92/wordpress/wp-content/uploads/2010/11/rss.png" alt="" /></a></div>
+		</li>	</ul>
+
+		
+</div><!--end of #sidebar -->	<br class="clear" />
+	</div><!-- end of #wrapper -->
+
+	<div id="footer">
+		<div class="container">
+			<div class="ftext fleft">
+				Ski Bradford Blog &copy; 2011. All rights reserved. 
+			</div>
+
+				
+		<div class="clear"></div>
+	</div>
+	
+<!-- tracker added by Ultimate Google Analytics plugin v1.6.0: http://www.oratransplant.nl/uga -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-19254766-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+	<script language="javascript" type="text/javascript" src="http://209.251.75.92/wordpress/wp-content/themes/brightsky/js/tab.js"></script>
+	<script language="javascript" type="text/javascript" src="http://209.251.75.92/wordpress/wp-content/themes/brightsky/js/jquery.fieldtag.min.js"></script>
+	
+	<script type="text/javascript">
+	<!--
+	jQuery(function($){
+	    //snip
+		$("#author,#url,#email,#comment").fieldtag();
+	    //snap
+	});
+	-->
+	</script>
+
+	</body>
+</html>
