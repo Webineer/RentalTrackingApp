@@ -14,7 +14,7 @@
   <!-- /script -->
 
 <!-- form method="POST" action="< ?php print $_SERVER["SCRIPT_NAME"]; ?>" name="rentalForm" -->
-<form method="POST" action="rentals_do.php" name="rentalForm" >
+<form method="POST" action="returns_do.php" name="returnForm" >
 				
     <p class="center">
 				
@@ -31,4 +31,4 @@
     
 </form>
 
-<script language="Javascript">document.rentalForm.equipment_id.focus()</script>
+<script language="Javascript">document.returnForm.equipment_id.focus()</script>

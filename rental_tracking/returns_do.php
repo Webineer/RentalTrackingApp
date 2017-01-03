@@ -15,12 +15,11 @@
 
 <h1>Ski Bradford Rental Tracking</h1>
 
-<h2>Equipment Return</h2>
+<h2>Equipment Rental Tracking Administration</h2>
 
 
 <?php
 //enter equipment id into transactions table
-/*
 	if ($_POST["equipment_id"]) {
 	   //get the equipment id and confirm that the equipment is in the database
         $table_name = "equipment";
@@ -40,27 +39,22 @@
             //Ready to enter into the transactions table
             $table_name = "transactions";
             $field_names = array("equipment1_id", "transaction_type", "transaction_date", "transaction_time");
-            $field_values = array($equipment_id, "in", date('Y-m-d'), date('g:h:s'));
+            $field_values = array($equipment_id, "in", date('Y-m-d'), date('h:i:s'));
             //print "the equip id is " . $equipment_id . " and the date is " . date('Y-m-d') . "<br>";
             insert_data($table_name, $field_names, $field_values); 
             //print "<p class=\"warning\">" . $equipment_name . " (Equipment Id #" . $_POST['equipment_id'] . ") Returned!</p>";
-            print "<p class=\"warning\">" . $equipment_name . " (Equipment #" . $equipment_number . ") Returned!</p>";
+            //print "<p class=\"warning\">" . $equipment_name . " (Equipment #" . $equipment_number . ") Returned!</p>";
+            print "<p class=\"warning\">IN!</p>";
 	   }
     } else {
-		print "<p>Please use the form below to edit section information.  Required fields are <span class=\"bold\">bold</span>.</p>";
+		print "<p>Please enter a barcode for a return.</p>";
 	}
-*/	
-	//$field_names = array("id", "product_id", "level_id", "location_id", "instructor_id", "section_name", "section_date", "section_time_id", "max_seats", "section_id", "section_status", "section_age_id");
-	//$id_field_name = "id";
-	////$id_field_type = "number";
-	//if ($_GET["rowID"]) {
-	//	$row = get_one_row_data_array($table_name, $field_names,$id_field_name, $_GET["rowID"], $id_field_type);
-	//} else {
-	//	$row = get_one_row_data_array($table_name, $field_names,$id_field_name, $_POST["id"], $id_field_type);
-	//}
-	require("lib/forms/return_form.php");
+
+	//require("lib/forms/rental_form.php");
 ?>
 </div>
+
+<script language="Javascript">setTimeout("location.assign('returns.php')", 2000);</script>
 
 <?php
 	require_once("includes/index_footer.php");
