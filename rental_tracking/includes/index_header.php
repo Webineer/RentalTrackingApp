@@ -15,9 +15,9 @@
 <div align="center">
 <table CELLSPACING="0" CELLPADDING="2" BORDER="0">
 	<TR ALIGN=center>
-		<TD><IMG SRC="<?php print APP_ROOT; ?>images/ski1sm.gif" ALT="Skier"></TD>
-		<TD ALIGN="center"><IMG SRC="<?php print APP_ROOT; ?>images/bradfordsm.jpg" BORDER="0" WIDTH="300" HEIGHT="231" ALT="Ski Bradford Logo"><BR></TD>
-		<TD><IMG SRC="<?php print APP_ROOT; ?>images/board1.gif" ALT="Snowboarder"></TD>
+		<TD><IMG SRC="<?php print APP_ROOT; ?>images/ski1vsm.gif" ALT="Skier"></TD>
+		<TD ALIGN="center"><IMG SRC="<?php print APP_ROOT; ?>images/bradfordvsm.jpg" BORDER="0" ALT="Ski Bradford Logo"><BR></TD>
+		<TD><IMG SRC="<?php print APP_ROOT; ?>images/board1vsm.gif" ALT="Snowboarder"></TD>
 	</TR>
 </table>
 </div>

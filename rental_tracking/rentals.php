@@ -19,6 +19,9 @@
 
 
 <?php
+    $the_date = date('Y-m-d');
+    $l = 0;
+    $l = get_number_of_out_equipment($the_date);
 //enter equipment id into transactions table
 /*
 	if ($_POST["equipment_id"]) {
@@ -58,6 +61,8 @@
 	//} else {
 	//	$row = get_one_row_data_array($table_name, $field_names,$id_field_name, $_POST["id"], $id_field_type);
 	//}
+    print "<h2 class=\"warning_red\">The number of equipment out is: " . $l . "</h2>";
+    
 	require("lib/forms/rental_form.php");
     
 ?>

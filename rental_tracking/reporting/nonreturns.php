@@ -19,22 +19,28 @@
 <?php
     //current date
     $the_date = date('Y-m-d');
+    $l = 0;
     //$the_date = "2016-12-30";
     //history of piece of equipment for the day
     //$sql_string = "select equipment.equipment_name, transactions.equipment1_id, transactions.transaction_type from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "') ORDER BY transactions.equipment1_id, transactions.id";
     if ($_POST['the_date']) {
-        $sql_string = "select equipment.equipment_name, equipment.ski_number, transactions.transaction_type, transactions.transaction_time from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "') ORDER BY transactions.equipment1_id, transactions.id";
+        $sql_string = "select equipment.equipment_name, equipment.ski_number, transactions.transaction_type, transactions.transaction_time from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.transaction_date = '" . $_POST['the_date'] . "' and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "') ORDER BY transactions.equipment1_id, transactions.id";
+        
         //get the set of equipment rented for the day
-        $sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "'";
+        //$sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "'";
+        $l = get_number_of_out_equipment($_POST['the_date']);
     
     } else {
         $sql_string = "select equipment.equipment_name, equipment.ski_number, transactions.transaction_type, transactions.transaction_time from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "') ORDER BY transactions.equipment1_id, transactions.id";        
         //get the set of equipment rented for the day
-        $sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "'";
+        //$sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "'";
+        $l = get_number_of_out_equipment($the_date);
     
     }
     
-        
+    //print $sql_string . "<br>";
+    
+   /*  
     //put into an array
     //$id_array = get_row_data_2_array_generic_sql($sql_string2);
     $res2 = view_data_generic_sql($sql_string2);
@@ -70,6 +76,8 @@
             $l = $l + 1;
         } 
     }
+    */
+    
     print "<h2 class=\"warning_red\">The number of equipment out is: " . $l . "</h2>";
     
     print "<p>Please see the equipment rental summary below:</p>";

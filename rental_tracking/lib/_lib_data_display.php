@@ -2164,6 +2164,48 @@ function display_program_times($result_object, $program_id, $level_id, $form_typ
 	}
 }
 
+function get_number_of_out_equipment($the_date) {
+    
+    $sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "'";
+     //put into an array
+    //$id_array = get_row_data_2_array_generic_sql($sql_string2);
+    $res2 = view_data_generic_sql($sql_string2);
+    $id_array = generate_array($res2);
+    //display_array($id_array);
+    
+    //get the max id for each array element
+    $j = 0;
+    foreach ($id_array as $the_value) {
+        $sql_string3 = "select max(id) from transactions where equipment1_id = " . $the_value;
+        $max_id_array[$j] = get_one_data_generic_sql($sql_string3); 
+        $j = $j + 1;       
+    }
+    //print "<br>";
+    //display_array($max_id_array);
+    
+    //get the transaction type for each max id record
+    $k = 0;
+    foreach ($max_id_array as $the_value2) {
+        $sql_string4 = "select transaction_type from transactions where id = " . $the_value2;
+        $max_id_value_array[$k] = get_one_data_generic_sql($sql_string4);
+        $k = $k + 1;
+    }
+    ////print "<br>";
+    //display_array($max_id_value_array);
+    //print "<br>";
+    
+    //count how many values are OUT
+    $l = 0;
+    foreach($max_id_value_array as $the_value3) {
+        //print $the_value3 . "<br>";
+        if ($the_value3 == "out") {
+            $l = $l + 1;
+        } 
+    }
+    
+    return $l;
+}
+
 //This function takes the result object from a db library function
 //and parses it into the instructor table
 function generate_array($result_object) {
