@@ -36,15 +36,23 @@
         if (is_null($equipment_id)) {
             print "<p class=\"warning_red\">Transaction cancelled.  This piece of equipment not registered.</p>";            
         } else {
-            //Ready to enter into the transactions table
-            $table_name = "transactions";
-            $field_names = array("equipment1_id", "transaction_type", "transaction_date", "transaction_time");
-            $field_values = array($equipment_id, "out", date('Y-m-d'), date('g:h:s'));
-            //print "the equip id is " . $equipment_id . " and the date is " . date('Y-m-d') . "<br>";
-            insert_data($table_name, $field_names, $field_values); 
-            //print "<p class=\"warning\">" . $equipment_name . " (Equipment Id #" . $_POST['equipment_id'] . ") Rented!</p>";
-            //print "<p class=\"warning\">" . $equipment_name . " (Equipment #" . $equipment_number . ") Rented!</p>";
-            print "<p class=\"warning\">OUT!</p>";
+            //check to see if this equipment is already rented
+            $sql_string5 = "select transaction_type from transactions where equipment1_id = '" . $equipment_id . "' and id in (select max(id) from transactions where equipment1_id = '" . $equipment_id . "')";
+            //print $sql_string5 . "<br>";
+            $temp_transaction_type = get_one_data_generic_sql($sql_string5);
+            if ($temp_transaction_type == "out") {
+                print "<p class=\"warning_red\">Transaction cancelled.  This piece of equipment is already out (rented).</p>";
+            } else {
+                //Ready to enter into the transactions table
+                $table_name = "transactions";
+                $field_names = array("equipment1_id", "transaction_type", "transaction_date", "transaction_time");
+                $field_values = array($equipment_id, "out", date('Y-m-d'), date('h:i:s'));
+                //print "the equip id is " . $equipment_id . " and the date is " . date('Y-m-d') . "<br>";
+                insert_data($table_name, $field_names, $field_values); 
+                //print "<p class=\"warning\">" . $equipment_name . " (Equipment Id #" . $_POST['equipment_id'] . ") Rented!</p>";
+                //print "<p class=\"warning\">" . $equipment_name . " (Equipment #" . $equipment_number . ") Rented!</p>";
+                print "<p class=\"warning\">OUT!</p>";
+            }
 	   }
     } else {
 		print "<p>Please enter a barcode for rental.</p>";

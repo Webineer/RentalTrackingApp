@@ -1,6 +1,6 @@
 <script language='javascript' src='/rental_tracking/includes/popcalendar.js'></script>
 
-<form method="POST" action="nonreturns.php" name="dateForm">
+<form method="POST" action="usage.php" name="dateForm">
 <table cellpadding="0" cellspacing="3" border="0">
 <tr>
 	<td><p>Operation Date:</p></td>

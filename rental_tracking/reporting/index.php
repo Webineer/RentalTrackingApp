@@ -20,6 +20,12 @@
 
 <h3>Rental Non-Returns Report</h3>
 
+<p>Please click <a href="nonreturns.php">here</a> to view outstanding equipment for the current day's rentals.</p>
+
+<h3>Daily Usage/History</h3>
+
+<p>Select a date and click the button to find the usage history for a specific day of the season.</p>
+
 <p><?php require("../lib/forms/nonreturns_date_form.php"); ?></p>
 
 <!-- h3>Equipment Usage Report</h3>

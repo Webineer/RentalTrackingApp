@@ -16,7 +16,7 @@
 
 <h2>Reporting</h2>
 
-<h3>Outstanding Equipment</h3>
+<h3>Daily Equipment Usage 
 
 <?php
     //current date
@@ -25,27 +25,26 @@
     //$the_date = "2016-12-30";
     //history of piece of equipment for the day
     //$sql_string = "select equipment.equipment_name, transactions.equipment1_id, transactions.transaction_type from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "') ORDER BY transactions.equipment1_id, transactions.id";
-    //if ($_POST['the_date']) {
-    //    $sql_string = "select equipment.equipment_name, equipment.ski_number, transactions.transaction_type, transactions.transaction_time from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.transaction_date = '" . $_POST['the_date'] . "' and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "') ORDER BY transactions.equipment1_id, transactions.id";
+    if ($_POST['the_date']) {
+        print " For " . convert_date_display($_POST['the_date']) . "<h3>";
+        $sql_string = "select equipment.equipment_name, equipment.ski_number, transactions.transaction_type, transactions.transaction_time from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.transaction_date = '" . $_POST['the_date'] . "' and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "') ORDER BY transactions.equipment1_id, transactions.id";
         
-    //    //get the set of equipment rented for the day
-    //    //$sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "'";
-    //    $l = get_number_of_out_equipment($_POST['the_date']);
-    
-    //} else {
-        $sql_string = "select equipment.equipment_name, equipment.ski_number, transactions.transaction_type, transactions.transaction_time from transactions, equipment ";
-        $sql_string .= "where transactions.equipment1_id=equipment.id and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "') ";
-        //$sql_string .= "and transactions.id in (select max(id) from transactions where equipment1_id = equip_id) ";
-        $sql_string .= "order by transactions.equipment1_id, transactions.id desc";        
         //get the set of equipment rented for the day
-        $sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "'";
+        //$sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $_POST['the_date'] . "'";
+        $l = get_number_of_out_equipment($_POST['the_date']);
+    
+    } else {
+        print " For " . convert_date_display($the_date) . "<h3>";
+        $sql_string = "select equipment.equipment_name, equipment.ski_number, transactions.transaction_type, transactions.transaction_time from transactions, equipment where transactions.equipment1_id=equipment.id and transactions.equipment1_id in (select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "') ORDER BY transactions.equipment1_id, transactions.id";        
+        //get the set of equipment rented for the day
+        //$sql_string2 = "select distinct equipment1_id from transactions where transaction_date = '" . $the_date . "'";
         $l = get_number_of_out_equipment($the_date);
     
-    //}
+    }
     
     //print $sql_string . "<br>";
     
-    /* 
+   /*  
     //put into an array
     //$id_array = get_row_data_2_array_generic_sql($sql_string2);
     $res2 = view_data_generic_sql($sql_string2);
@@ -88,7 +87,7 @@
     print "<p>Please see the equipment rental summary below:</p>";
     //print $sql_string . "<br>";
     $res = view_data_generic_sql($sql_string);
-    display_equipment_out($res);
+    display_equipment_history($res);
     
 ?>
 

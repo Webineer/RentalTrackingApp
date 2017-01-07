@@ -1368,6 +1368,44 @@ function display_equipment_history($result_object) {
 	print "</table></div>";
 }
 
+//This function takes the result object from a db library function
+//and parses it into the instructor table
+function display_equipment_out($result_object) {
+	print "<div valign=\"center\">";
+	print "<div align=\"center\">";
+	//print "<table cellpadding=\"0\" cellspacing=\"0\" border=\"1\" width=\"425\">";
+	print "<tr>";
+	//Begin count index
+	$i = "none";
+    print "<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"40%\">";
+	while ($row = $result_object->fetchRow()) {    
+		//print "id is " . $row[0] . "<br>";
+		if ($i != $row[1]) {
+		    if ($row[2] == "out") {
+                //print "<tr><td colspan=\"4\"><br><br></td>";
+	       		//print "<tr>";
+		      	//print "<th colspan=\"3\" width=\"100%\">" . stripslashes($row[0]) . " - " . stripslashes($row[1]) . "</th>";
+                //print "</tr>";
+                print "<tr>";
+                print "<th>" . stripslashes($row[0]) . "</th>";
+                print "<th>" . stripslashes($row[1]) . "</th>";
+                print "<th>" . stripslashes($row[2]) . "</th>";
+                print "<th>" . stripslashes($row[3]) . "</th>";
+                print "</tr>";
+            }
+			$i = $row[1];
+		} else {
+            //don't print any other info'
+			//print "<tr>";
+			//print "<td><span class=\"card_no_indent\">" . stripslashes($row[0]) . "</span>&nbsp;</td>";
+			//print "<td><span class=\"card_no_indent\">" . stripslashes($row[1]) . "</span>&nbsp;</td>";
+			//print "<td><span class=\"card_no_indent\">" . stripslashes($row[2]) . "</span>&nbsp;</td>";
+            //print "<td><span class=\"card_no_indent\">" . stripslashes($row[3]) . "</span>&nbsp;</td>";
+			//print "</tr>";
+		}
+	}
+	print "</table></div>";
+}
 
 
 //This function takes the result object from a db library function
@@ -2176,7 +2214,7 @@ function get_number_of_out_equipment($the_date) {
     //get the max id for each array element
     $j = 0;
     foreach ($id_array as $the_value) {
-        $sql_string3 = "select max(id) from transactions where equipment1_id = " . $the_value;
+        $sql_string3 = "select max(id) from transactions where equipment1_id = " . $the_value . " and transaction_date = '" . $the_date . "'";
         $max_id_array[$j] = get_one_data_generic_sql($sql_string3); 
         $j = $j + 1;       
     }
