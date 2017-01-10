@@ -117,7 +117,7 @@ function display_equipment_data($result_object) {
 	while ($row = $result_object->fetchRow()) {    
 		//print "id is " . $row[0] . "<br>";
 		print "<tr>";
-		print "<td><span class=no_indent>" . stripslashes($row[1]) . "&nbsp;";
+		print "<td><span class=no_indent>" . stripslashes($row[1]) . "</span></td>";
 		//print stripslashes($row[2]) . "</span></td>";
 		print "<td><span class=no_indent>" . stripslashes($row[2]) . "</span></td>";
 		//print "<td><span class=no_indent>" . stripslashes($row[4]) . "</span></td>";
@@ -128,7 +128,7 @@ function display_equipment_data($result_object) {
 		print "<a href=\"edit.php?rowID=$row[0]\">Edit</a>&nbsp;&nbsp;";
         //print "<a href=\"sections_assignments.php?rowID=$row[0]\">Assignments</a></td>";
         //print "<a href=\"/instructors/admin/assignment/assignment_by_instructor.php?rowID=$row[0]\">Assignments</a></td>";
-		print "</tr>";
+		print "</td></tr>";
 	}
 	
 	print "</table></div>";

@@ -42,6 +42,8 @@
             $temp_transaction_type = get_one_data_generic_sql($sql_string5);
             if ($temp_transaction_type == "in") {
                 print "<p class=\"warning_red\">Transaction cancelled.  This piece of equipment is already in (returned).</p>";
+            } elseif ($temp_transaction_type != "out") {
+                print "<p class=\"warning_red\">Transaction cancelled.  This piece of equipment has not been rented.</p>";                
             } else {
                 //Ready to enter into the transactions table
                 $table_name = "transactions";

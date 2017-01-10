@@ -49,7 +49,7 @@
     } elseif ($_POST['equip_id']) {
         $table_name = "equipment";
         $field_names = array("id", "equipment_id", "equipment_name");
-        $id_field = "id";
+        $id_field = "equipment_id";
         //$id_value = $_GET['instructor_id'];
         $id_value = $_POST['equip_id'];
         $id_data_type = "number";
@@ -58,7 +58,7 @@
         if ($res->numRows() > 0) {
             display_equipment_data($res);
         } else {
-            print "<p class=bold >There is no equipment entered in the application at this time.</p>";
+            print "<p class=bold >There is no piece of equipment entered in the application with that barcode.</p>";
         }
         
     } else {
